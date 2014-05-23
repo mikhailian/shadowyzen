@@ -53,11 +53,11 @@ a {
     }
   }
 }
-
-ul.menu {
-  padding: 0 0 0 1em;
+.region-sidebar-first {
+  .view, .item-list, ul, ul.menu, ol.menu {
+    padding: 0 0 0 1em;
+  }
 }
-
 .region-sidebar-second {
   .block {
     display:inline-block;
@@ -66,6 +66,7 @@ ul.menu {
     }
   }
 }
+
 
 th {
   color: white;
