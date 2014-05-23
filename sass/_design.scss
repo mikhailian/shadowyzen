@@ -244,7 +244,7 @@ ul.action-links li{
 }
 
 .form-actions input {
-  padding:0.25em;
+  padding:0.5em;
   margin-right:1em;
 }
 
@@ -304,8 +304,9 @@ blockquote:before {
   text-shadow: 1px 1px 1px #aaa;
   float:left;
   height: 1px;
-  margin-top: 0.25em;
-  margin-right: 0.2em;
+  margin-top: 0.2em;
+  margin-right: 0.1em;
+  font-family: Arial, helvetica, sans-serif;
 }
 
 /* Padding of images, e.g. on home page*/
@@ -465,8 +466,7 @@ tr.even, tr.odd {
 /* search form on homepage */
 #block-search-form  {
   text-align:center;
-  vertical-align: middle;
-  height: 2.3333em;
+  padding-top:5px;
 }
 #edit-search-block-form--2 {
   width: 28%;
