@@ -1,20 +1,26 @@
 @import "compass/layout/stretching";
-/**mail color */
-$color: #B82223;
-$highlight_color: #D82223;
-$header_color: #aaa;
+/** main color */
+$color: #B21212;
+/* complementary colors, cf https://kuler.adobe.com/Circus-III-color-theme-36202*/
+$color1: #1485CC;
+$color2: #D90000;
+$header_color: #999;
+$highlight_color: $color2;
 $shadow_color: #eee;
+$border_color: #ccc;
+$fantasy_font: Marmelad, fantasy, sans-serif;
 
+/* styling of basic elements */
 p {
   text-align:justify;
 }
 
 h1, h2 {
-  font-family: Marmelad, Arial, helvetica, sans-seriv;
-  color:$header_color;
+  color: $header_color;
+  font-family: $fantasy_font;
   text-align:justify;
   @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
-  line-height: 1.5em;
+  line-height: 1.25em;
   a {
     &:hover {
       text-decoration: none;
@@ -31,59 +37,70 @@ a {
   }
 }
 
-/* overrides system.menus.css */
+/* styling of Drupal elements */
 
-ul.menu {
-  li {
-  color: $color;
+.sidebar {
+  text-align: center;
+  display:inline-block;
+  .block {
+    .item-list, ul, ul.menu {
+      text-align:left;
+      @include hyphens(auto);
+      li {
+        margin:0;
+        color: $color;
+      }
+    }
   }
 }
 
-
-/* misc*/
-.poll {
-  title {
-    font-weight: bold;
-    color: #444;
-  }
-  .bar .foreground {
-   background-color:$color;
+.region-sidebar-second {
+  .block {
+    display:inline-block;
   }
 }
 
-
-.block-poll .links {
-  text-align:right;
-  list-style-type: none;
-  font-size:small;
+th {
+  color: white;
+  background-color: $color1;
+  padding:0.5em;
+  a {
+    color:white;
+    &:hover {
+      text-decoration:underline;
+    }
+  }
 }
+
+.block-poll {
+  .poll {
+    title {
+      font-weight: bold;
+      color: #444;
+    }
+    .bar {
+      .foreground {
+       background-color:$color;
+      }
+    }
+  }
+  .links {
+    text-align:right;
+    list-style-type: none;
+    font-size:small;
+  }
+}
+
 
 .more-link, .submitted, ul.links.inline, ul.pager {
  font-size:small;
 }
 
-.item-list ul {
-  @include hyphens(auto);
+.user-picture {
+  float:right;
+  padding-left: 0.83em;
 }
 
-
-.node, .block {
-  .date-display-single {
-    float: right;
-    color: $color;
-    font-family: Impact, sans-serif;
-    font-size: large;
-  }
-  .field-type-taxonomy-term-reference {
-    float: right;
-    font-size: small;
-    padding-right: 2em;
-  }
-}
-
-
-
-/* blocks*/
 #block-forum-new, #block-system-navigation {
   ul {
     li {
@@ -96,62 +113,90 @@ ul.menu {
   }
 }
 
-
-
-.block .item-list ul li {
-  margin:0;
-  color: #B72222;
-}
-
-ul.menu {
-  font-weight: bold;
-  font-size: small;
+/* position event picture in the top right corner */
+.node {
+  .field-name-field-image {
+    float:right;
+  }
 }
 
 .node, .comment, .view-top-comments .views-row {
-  border: solid 1px #CCC;
-  -webkit-box-shadow: 3px 3px 4px #CCC;
-  -moz-box-shadow: 3px 3px 4px #ccc;
-  box-shadow: 3px 3px 4px #CCC;
-  padding: 0.83em;
-  margin-bottom:0.83em;
+  border: solid 1px $border-color;
+  @include single-box-shadow($shadow_color, 3px, 3px, 3px);
+  padding: 10px;
+  margin-bottom:10px;
 }
 
+.node, .block {
+  .date-display-single {
+    float: right;
+    bottom:0;
+    color: $color1;
+    font-family: Impact, Charcoal, fantasy, sans-serif;
+    font-size: large;
+  }
+  .field-type-taxonomy-term-reference {
+    float: right;
+    font-size: small;
+    padding-right: 2em;
+  }
+}
 
 #content .section {
   padding:0 10px 0 10px;
 }
 
 /* forum */
-#forum table {
-  width:100%;
-}
-#forum th, #forum thead th, #forum tbody th  {
-  padding-top: 1em;
-  padding-bottom:1em;
-  background-color: #ccc;
-  padding:0.34em 0.34em 0.17em 0.34em;
+#forum {
+  .icon .topic-status-new {
+    background-position: -24px 0;
+  }
+  .icon .topic-status-hot {
+    background-position: -48px 0;
+  }
+  .icon .topic-status-hot-new {
+    background-position: -72px 0;
+  }
+  .icon .topic-status-sticky {
+    background-position: -96px 0;
+  }
+  .icon .topic-status-closed {
+    background-position: -120px 0;
+  }
+
+  border: solid 1px $border-color;
+  table {
+    margin:0;
+    div.indent {
+      margin-left: 20px; /* LTR */
+    }
+    .name {
+      font-weight: bold;
+      text-shadow: 1px 1px 1px $border-color;
+      color: $border-color;
+    }
+    .icon div {
+      background-image: url(../images/forum-icons.png);
+      background-repeat: no-repeat;
+      float: left; /* LTR */
+      height: 24px;
+      margin: 0 9px 0 0; /* LTR */
+      width: 24px;
+    }
+    table {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    td{
+      padding: 0.5em;
+      &.topics, &.posts {
+        white-space:nowrap;
+      }
+    }
+  }
 }
 
-#forum th {
-  font-size:smaller;
-}
-#forum td{
-  padding-top: 1em;
-  padding-bottom:1em;
-  word-wrap: break-word;
-}
 
-.forum .name {
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #ccc;
-  color: #ccc;
-}
-
-.user-picture {
-  float:right;
-  padding-left: 0.83em;
-}
 
 /* remove underline from primary links menu */
 ul.primary {
@@ -199,8 +244,10 @@ ul.action-links li{
 }
 
 .form-actions input {
-  margin-right:0.83em;
+  padding:0.25em;
+  margin-right:1em;
 }
+
 
 .administrator, .administrator:link, .administrator:hover, .administrator:visited {
   color:#ff0000;
@@ -214,14 +261,16 @@ ul.action-links li{
   color:#b922b9;
 }
 
-.node .field-name-field-image {
-  float:right;
-}
-
 .block-locale {
-  position:absolute !important;
-  top:0;
-  right:0;
+  position:fixed;
+  top: -$nav-height;
+  right:1px;
+  ul {
+    list-style-type: none;
+    li {
+      display:inline;
+    }
+  }
 }
 
 
@@ -251,7 +300,7 @@ td {
 blockquote:before {
   content: "\201C";
   font-size: 57px;
-  color: #B72222;
+  color: $color;
   text-shadow: 1px 1px 1px #aaa;
   float:left;
   height: 1px;
@@ -278,17 +327,6 @@ blockquote:before {
   padding-bottom: 1.836em;
 }
 
-#forum {
-  border: solid 1px #CCC;
-  -webkit-box-shadow: 3px 3px 4px #CCC;
-  -moz-box-shadow: 3px 3px 4px #ccc;
-  box-shadow: 3px 3px 4px #CCC;
-}
-
-#forum td, .view-tracker td {
-  word-break:break-all;
-}
-
 #block-system-main table {
   width:100%;
 }
@@ -302,11 +340,11 @@ tr.even, tr.odd {
 }
 
 ::selection {
-  background: #B72222; /* Safari */
+  background: $color; /* Safari */
   color: #FFF;
   }
 ::-moz-selection {
-  background: #B72222; /* Firefox */
+  background: $color; /* Firefox */
   color: #FFF;
 }
 
@@ -397,7 +435,7 @@ tr.even, tr.odd {
 }
 
 .vote-90 {
-  background-color:#B72222;
+  background-color:$color;
   color: #fff;
 }
 
@@ -407,20 +445,16 @@ tr.even, tr.odd {
 
 /* navigation bar */
 #navigation {
-  background: #000;
-  color: #fff;
+  background-color:$color1;
   font-size:small;
   font-weight:bold;
   left: 0;
-  padding-bottom: 3px;
+  padding-right:50px;
+  padding-left:50px;
   right: 0;
   top: 0;
-  -moz-box-shadow: 0 3px 20px #000;
-  -webkit-box-shadow: 0 3px 20px #000;
-  box-shadow: 0 3px 20px #000;
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10');
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10')";
   z-index: 600;
+  @include single-box-shadow($shadow_color, 3px, 3px, 3px);
 }
 
 #navigation  a:link, #navigation a:visited, #navigation a:hover {
@@ -449,10 +483,17 @@ tr.even, tr.odd {
 }
 
 #block-system-navigation a[href="/node/add"] {
-  font-size: x-large;
+  font-family: $fantasy_font;
+  font-size: large;
+  font-weight: bold;
+  @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
+  color: $color1;
 }
 
 #block-user-login a[href="/user/register"] {
-  font-size: x-large;
+  font-family: $fantasy_font;
+  font-size: large;
   font-weight: bold;
+  color: $color1;
+  @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
 }
