@@ -56,6 +56,15 @@ $zen-auto-include-item-base: false;
 }
 
 /* Navigation bar */
+@media all and (max-width: 479px) {
+  #header {
+    text-align:center;
+    #logo {
+      float:none;
+    }
+  }
+}
+
 @media all and (min-width: 480px) {
   #main {
     /* Move all the children of #main down to make room. */

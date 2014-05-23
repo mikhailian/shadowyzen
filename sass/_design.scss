@@ -39,11 +39,11 @@ a {
 
 /* styling of Drupal elements */
 
-.region-sidebar-first {
+.sidebar {
   text-align: center;
   display:inline-block;
   .block {
-    .item-list, ul, ul.menu {
+    .view, .item-list, ul, ul.menu, ol.menu {
       text-align:left;
       @include hyphens(auto);
       li {
@@ -54,9 +54,16 @@ a {
   }
 }
 
+ul.menu {
+  padding: 0 0 0 1em;
+}
+
 .region-sidebar-second {
   .block {
     display:inline-block;
+    ul {
+      padding: 0;
+    }
   }
 }
 
@@ -351,74 +358,52 @@ tr.even, tr.odd {
 
 .vote-0 {
   zoom: 1;
-  filter: alpha(opacity=0);
+  @include opacity(0);
   opacity: 0;
 }
 
 .vote-0:hover {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
+  @include opacity(0);
 }
 
 .vote-10 {
-  zoom: 1;
-  filter: alpha(opacity=10);
-  opacity: 0.1;
+  @include opacity(0.1);
 }
 
 .vote-10:hover {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
+  @include opacity(1);
 }
 
 .vote-20 {
-  zoom: 1;
-  filter: alpha(opacity=20);
-  opacity: 0.2;
+  @include opacity(0.2);
 }
 
 .vote-20:hover {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
+  @include opacity(1);
 }
 
 .vote-30 {
-  zoom: 1;
-  filter: alpha(opacity=30);
-  opacity: 0.3;
+  @include opacity(0.3);
 }
 
 .vote-30:hover {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
+  @include opacity(1);
 }
 
 .vote-40 {
-  zoom: 1;
-  filter: alpha(opacity=40);
-  opacity: 0.4;
+  @include opacity(0.4);
 }
 
 .vote-40:hover {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
+  @include opacity(1);
 }
 
 .vote-50 {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+  @include opacity(0.5);
 }
 
 .vote-50:hover {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
+  @include opacity(1);
 }
 
 /*.vote-60 {
@@ -498,3 +483,12 @@ tr.even, tr.odd {
   color: $color1;
   @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
 }
+
+/*@media all and (max-width: 479px) {
+  #header {
+    text-align:center;
+    .header__logo {
+      float:none;
+    }
+  }
+}*/
