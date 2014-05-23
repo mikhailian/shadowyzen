@@ -39,7 +39,7 @@ a {
 
 /* styling of Drupal elements */
 
-.sidebar {
+.region-sidebar-first {
   text-align: center;
   display:inline-block;
   .block {
@@ -104,8 +104,8 @@ th {
 #block-forum-new, #block-system-navigation {
   ul {
     li {
-      padding-top:0.17em;
-      padding-bottom:0.17em;
+      padding-top:0.32em;
+      padding-bottom:0.32em;
     }
   }
  .item-list ul {
@@ -465,11 +465,12 @@ tr.even, tr.odd {
 
 /* search form on homepage */
 #block-search-form  {
+  width: 80%;
+  margin:auto;
   text-align:center;
-  padding-top:5px;
 }
 #edit-search-block-form--2 {
-  width: 28%;
+  width:50%;
   margin: 4px 0 0 0;
 }
 
