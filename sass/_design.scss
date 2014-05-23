@@ -29,6 +29,10 @@ h1, h2 {
   }
 }
 
+table {
+  width:100%;
+}
+
 a {
   color:$color;
   text-decoration: none;
@@ -140,8 +144,7 @@ th {
     float: right;
     bottom:0;
     color: $color1;
-    font-family: Impact, Charcoal, fantasy, sans-serif;
-    font-size: large;
+    font-family: Inconsolata, fantasy, sans-serif;
   }
   .field-type-taxonomy-term-reference {
     float: right;
@@ -336,10 +339,6 @@ blockquote:before {
   padding-bottom: 1.836em;
 }
 
-#block-system-main table {
-  width:100%;
-}
-
 tr.even, tr.odd {
   background-color: white;
 }
@@ -454,6 +453,7 @@ tr.even, tr.odd {
   width: 80%;
   margin:auto;
   text-align:center;
+  padding:0.5em;
 }
 #edit-search-block-form--2 {
   width:50%;
