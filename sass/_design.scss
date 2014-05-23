@@ -43,7 +43,7 @@ a {
   text-align: center;
   display:inline-block;
   .block {
-    .view, .item-list, ul, ul.menu, ol.menu {
+    .view, .item-list ul, ul.menu, ol.menu {
       text-align:left;
       @include hyphens(auto);
       li {
@@ -54,7 +54,7 @@ a {
   }
 }
 .region-sidebar-first {
-  .view, .item-list, ul, ul.menu, ol.menu {
+  .view, .item-list ul, ul.menu, ol.menu {
     padding: 0 0 0 1em;
   }
 }

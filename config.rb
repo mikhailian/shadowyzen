@@ -8,8 +8,8 @@
 
 
 # Change this to :production when ready to deploy the CSS to the live server.
-environment = :development
-#environment = :production
+#environment = :development
+environment = :production
 
 # In development, we can turn on the FireSass-compatible debug_info.
 firesass = false
@@ -60,3 +60,7 @@ if environment != :production
   enable_sourcemaps = true
   sass_options = {:sourcemap => true}
 end
+
+#on_stylesheet_saved do |filename|
+#   exec('drush cc all')
+#end
