@@ -21,7 +21,7 @@ h1, h2, h3 {
   font-family: $fantasy_font;
   text-align:justify;
   @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
-  line-height: 1.25em;
+  line-height: rhythm(1);
   a {
     &:hover {
       text-decoration: none;
@@ -60,7 +60,7 @@ a {
 }
 .region-sidebar-first {
   .item-list ul, ul.menu, ol.menu {
-    padding: 0 0 0 1em;
+    padding: 0 0 0 rhythm(1);
   }
 }
 .region-sidebar-second {
@@ -100,29 +100,28 @@ th {
   .links {
     text-align:right;
     list-style-type: none;
-    font-size:small;
+    @include adjust-font-size-to(14px);
   }
 }
 
 
 .more-link, .submitted, ul.links.inline, ul.pager {
- font-size:small;
+  @include adjust-font-size-to(14px);
 }
 
 .user-picture {
   float:right;
-  padding-left: 0.83em;
+  padding-left: rhythm(0.83);
 }
 
 #block-forum-new {
   ul {
     li {
-      padding-top:0.32em;
-      padding-bottom:0.32em;
+      padding-bottom:rhythm(0.67);
     }
   }
  .item-list ul {
-    padding: 0.83em;
+    padding: rhythm(0.67);
   }
 }
 
@@ -136,8 +135,8 @@ th {
 .node, .comment, .view-top-comments .views-row {
   border: solid 1px $border-color;
   @include single-box-shadow($shadow_color, 3px, 3px, 3px);
-  padding: 10px;
-  margin-bottom:10px;
+  padding: rhythm(0.67);
+  margin-bottom:rhythm(0.67);
 }
 
 .node, .block {
@@ -149,8 +148,8 @@ th {
   }
   .field-type-taxonomy-term-reference {
     float: right;
-    font-size: small;
-    padding-right: 2em;
+    @include adjust-font-size-to(14px);
+    padding-right: rhythm(1.17);
   }
 }
 
