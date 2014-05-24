@@ -485,11 +485,9 @@ tr.even, tr.odd {
   @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
 }
 
-/*@media all and (max-width: 479px) {
-  #header {
-    text-align:center;
-    .header__logo {
-      float:none;
-    }
+#block-privatemsg-privatemsg-new {
+  @extend .messages;
+  h2 {
+    display:none;
   }
-}*/
+}
