@@ -1,9 +1,10 @@
 @import "compass/layout/stretching";
 /** main color */
-$color: #B21212;
+$color: #B21212; // RiB
 /* complementary colors, cf https://kuler.adobe.com/Circus-III-color-theme-36202*/
-$color1: #1485CC;
-$color2: #D90000;
+$color1: #1485CC; // light blue
+$color2: #D90000; // pink
+$color3: #0971B2; // deeper blue
 $header_color: #999;
 $highlight_color: $color2;
 $shadow_color: #eee;
@@ -15,7 +16,7 @@ p {
   text-align:justify;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: $header_color;
   font-family: $fantasy_font;
   text-align:justify;
@@ -113,7 +114,7 @@ th {
   padding-left: 0.83em;
 }
 
-#block-forum-new, #block-system-navigation {
+#block-forum-new {
   ul {
     li {
       padding-top:0.32em;
@@ -489,5 +490,13 @@ tr.even, tr.odd {
   @extend .messages;
   h2 {
     display:none;
+  }
+}
+
+#block-views-calendar-block-1 {
+  a {color: $color1;
+    &:hover {
+      color: $color3;
+    }
   }
 }
