@@ -493,6 +493,8 @@ tr.even, tr.odd {
 }
 
 #block-views-calendar-block-1 {
+  width:150px;
+  height:150px;
   a {color: $color1;
     &:hover {
       color: $color3;
