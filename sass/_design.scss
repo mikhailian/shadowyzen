@@ -48,7 +48,7 @@ a {
   text-align: center;
   display:inline-block;
   .block {
-    .view, .item-list ul, ul.menu, ol.menu {
+    .view, .item-list ul, ul.menu, ol.menu, table {
       text-align:left;
       @include hyphens(auto);
       li {
@@ -80,7 +80,7 @@ th {
   a {
     color:white;
     &:hover {
-      text-decoration:underline;
+      color:#eee;
     }
   }
 }
