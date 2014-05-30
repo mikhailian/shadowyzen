@@ -155,8 +155,10 @@ function shadowyzen_username($variables) {
   $variables['link_options']['attributes']['class'][] = $u_css_class;
   $variables['link_options']['attributes']['title'] = $u_title;
   if (isset($u->country_iso_code_2)) {
+    $country_list = country_get_list();
+    $country_name = $country_list[$u->country_iso_code_2];
     $variables['link_options']['attributes']['class'][] = $u->country_iso_code_2;
-    $variables['link_options']['attributes']['title'] .= ' | ' . $u->country_iso_code_2;
+    $variables['link_options']['attributes']['title'] .= ', ' . $country_name;
   }
   if (isset($variables['link_path'])) {
     // We have a link path, so we should generate a link using l().
