@@ -65,15 +65,10 @@ function shadowyzen_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function shadowyzen_preprocess_node(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
-
-  // Optionally, run node-type-specific preprocess functions, like
-  // shadowyzen_preprocess_node_page() or STARTERKIT_preprocess_node_story().
-  $function = __FUNCTION__ . '_' . $variables['node']->type;
-  if (function_exists($function)) {
-    $function($variables, $hook);
+  $user = user_load($variables['uid']);
+  if (!empty($user->country_iso_code_2)) {
+    $variables['country'] = t('from ' . l($user->country_iso_code_2), 'http://ru.wikipedia.org/wiki/.' . $user->country_iso_code_2);
   }
 }
 // */
@@ -86,8 +81,11 @@ function shadowyzen_preprocess_node(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("comment" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function shadowyzen_preprocess_comment(&$variables, $hook) {
+  $user = user_load($variables['uid']);
+  if (!empty($user->country_iso_code_2)) {
+    $variables['country'] = t('from ' . l($user->country_iso_code_2), 'http://ru.wikipedia.org/wiki/.' . $user->country_iso_code_2);
+  }
 }
 // */
 
@@ -128,3 +126,49 @@ function shadowyzen_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+function shadowyzen_username($variables) {
+  $u_css_class = '';
+  $u = user_load($variables['account']->uid);
+  // style depends on the role
+  if (!empty($u) && $u->uid == 1) {
+    $u_css_class='administrator';
+    $u_title=t('Administrator');
+  }
+  elseif(empty($u->roles)) {
+    $u_css_class='anonymous';
+    $u_title=t('Anonymous');
+  }
+  /* TODO roles is an array in D7, with rid as the key and name as the value */
+  elseif (in_array('node moderator', array_values($u->roles))) {
+    $u_css_class='node-moderator';
+    $u_title=t('Node moderator');
+  }
+  elseif (in_array('forum moderator', array_values($u->roles))) {
+    $u_css_class='forum-moderator';
+    $u_title=t('Forum moderator');
+  }
+  else {
+    $u_css_class='ordinary-user';
+    $u_title=t('Ordinary user');
+  }
+  $variables['link_options']['attributes']['class'][] = $u_css_class;
+  $variables['link_options']['attributes']['title'] = $u_title;
+  if (isset($u->country_iso_code_2)) {
+    $variables['link_options']['attributes']['class'][] = $u->country_iso_code_2;
+    $variables['link_options']['attributes']['title'] .= ' | ' . $u->country_iso_code_2;
+  }
+  if (isset($variables['link_path'])) {
+    // We have a link path, so we should generate a link using l().
+    // Additional classes may be added as array elements like
+    // $variables['link_options']['attributes']['class'][] = 'myclass';
+    $output = l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']);
+  }
+  else {
+    // Modules may have added important attributes so they must be included
+    // in the output. Additional classes may be added as array elements like
+    // $variables['attributes_array']['class'][] = 'myclass';
+    $output = '<span' . drupal_attributes($variables['attributes_array']) . '>' . $variables['name'] . $variables['extra'] . '</span>';
+  }
+  return $output;
+}
