@@ -65,11 +65,8 @@ function shadowyzen_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
+/* -- Delete this line if you want to use this function
 function shadowyzen_preprocess_node(&$variables, $hook) {
-  $user = user_load($variables['uid']);
-  if (!empty($user->country_iso_code_2)) {
-    $variables['country'] = t('from ' . l($user->country_iso_code_2), 'http://ru.wikipedia.org/wiki/.' . $user->country_iso_code_2);
-  }
 }
 // */
 
@@ -81,11 +78,8 @@ function shadowyzen_preprocess_node(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("comment" in this case.)
  */
+/* -- Delete this line if you want to use this function
 function shadowyzen_preprocess_comment(&$variables, $hook) {
-  $user = user_load($variables['uid']);
-  if (!empty($user->country_iso_code_2)) {
-    $variables['country'] = t('from ' . l($user->country_iso_code_2), 'http://ru.wikipedia.org/wiki/.' . $user->country_iso_code_2);
-  }
 }
 // */
 
