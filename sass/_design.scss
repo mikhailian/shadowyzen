@@ -486,6 +486,20 @@ tr.even, tr.odd {
   @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
 }
 
+#block-views-calendar-block-1 {
+  h2 {
+    margin:0;
+    float:left;
+    a[href="/calendar"] {
+      font-family: $fantasy_font;
+      font-size: large;
+      font-weight: bold;
+      @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
+      color: $color1;
+    }
+  }
+}
+
 #block-privatemsg-privatemsg-new {
   @extend .messages;
   h2 {
