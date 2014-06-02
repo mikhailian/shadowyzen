@@ -21,7 +21,7 @@ h1, h2, h3 {
   font-family: $fantasy_font;
   text-align:justify;
   @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
-  line-height: rhythm(1);
+  line-height: rhythm(0.83);
   a {
     &:hover {
       text-decoration: none;
@@ -60,7 +60,7 @@ a {
 }
 .region-sidebar-first {
   .item-list ul, ul.menu, ol.menu {
-    padding: 0 0 0 rhythm(1);
+    padding: 0 0 0 rhythm(0.5);
   }
 }
 .region-sidebar-second {
@@ -180,7 +180,7 @@ th {
     border: solid 1px $border-color;
     margin:0;
     div.indent {
-      margin-left: 20px; /* LTR */
+      margin-left: rhythm(1); /* LTR */
     }
     .name {
       font-weight: bold;
@@ -200,7 +200,7 @@ th {
       margin-bottom: 0;
     }
     td{
-      padding: 0.5em;
+      padding: rhythm(0.33);
       &.topics, &.posts {
         white-space:nowrap;
       }
@@ -256,8 +256,8 @@ ul.action-links li{
 }
 
 .form-actions input {
-  padding:0.5em;
-  margin-right:1em;
+  padding: rhythm(0.18) rhythm(0.5) rhythm(0.18) rhythm(0.5);
+  margin-right:rhythm(1);
 }
 
 
