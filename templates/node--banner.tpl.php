@@ -78,40 +78,7 @@
  * @see template_process()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<?php
+  print render($content);
+?>
 
-  <?php if ($type != 'event'): ?>
-    <?php print $user_picture; ?>
-  <?php endif; ?>
-
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
-  <?php if (!empty($content['field_image'])): ?>
-      <?php print render($content['field_image']); ?>
-  <?php endif; ?>
-
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
-
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['field_image']);
-      hide($content['links']);
-      print render($content);
-    ?>
-  </div>
-
-
-  <?php print render($content['links']); ?>
-
-</div>
-  <?php print render($content['comments']); ?>
