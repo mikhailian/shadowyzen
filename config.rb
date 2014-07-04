@@ -62,5 +62,5 @@ if environment != :production
 end
 
 #on_stylesheet_saved do |filename|
-#   exec('drush cc all')
+#   exec('drush -q cc all')
 #end
