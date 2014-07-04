@@ -64,7 +64,7 @@ a {
   }
 }
 .region-sidebar-second {
-  .block {
+  .banner {
     display:inline-block;
     ul {
       padding: 0;
@@ -497,6 +497,7 @@ tr.even, tr.odd {
 #block-views-calendar-block-1 {
   width:150px;
   height:150px;
+  display:inline-block;
   h2 {
     margin:0;
     a[href="/calendar"] {
