@@ -499,7 +499,6 @@ tr.even, tr.odd {
   height:150px;
   h2 {
     margin:0;
-    float:left;
     a[href="/calendar"] {
       font-family: $fantasy_font;
       @include single-text-shadow(1px, 1px, 1px, false, $shadow_color);
