@@ -35,7 +35,7 @@ function shadowyzen_preprocess_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered ("html" in this case.)
  */
 function shadowyzen_preprocess_html(&$variables, $hook) {
-  drupal_add_css('//fonts.googleapis.com/css?family=Marmelad|Inconsolata&subset=latin,cyrillic', array('group' => CSS_THEME));
+  drupal_add_css('//fonts.googleapis.com/css?family=PT+Sans|Inconsolata&subset=latin,cyrillic', array('group' => CSS_THEME));
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
