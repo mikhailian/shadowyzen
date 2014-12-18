@@ -1,0 +1,10 @@
+.field-type-addressfield {
+  background-color: #eee;
+  display: inline-block;
+  padding: 25px;
+  margin: 10px;
+  background-image: url(../images/airmail-strip.png);
+  background-repeat: repeat-x;
+  @include single-box-shadow($shadow_color, 3px, 3px, 3px);
+  border: solid 1px #ddd;
+}

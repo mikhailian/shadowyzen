@@ -104,6 +104,20 @@ $nav-height: 1.5em;
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
+/**
+/* added by lowry
+/*
+/** main color */
+$color: #B21212; // RiB
+/* complementary colors, cf https://kuler.adobe.com/Circus-III-color-theme-36202*/
+$color1: #1485CC; // light blue
+$color2: #D90000; // pink
+$color3: #0971B2; // deeper blue
+$header_color: #999;
+$highlight_color: $color2;
+$shadow_color: #eee;
+$border_color: #ccc;
+$fantasy_font: 'PT Sans', fantasy, sans-serif;
 
 // =============================================================================
 // Partials to be shared with all .scss files.
