@@ -1,10 +1,15 @@
-.field-type-addressfield {
+.field-type-addressfield .field-items .field-item {
   background-color: #eee;
   display: inline-block;
-  padding: 25px;
-  margin: 10px;
+  padding: 2em 2em 1.5em 2em;
+  margin: 1em;
   background-image: url(../images/airmail-strip.png);
   background-repeat: repeat-x;
   @include single-box-shadow($shadow_color, 3px, 3px, 3px);
   border: solid 1px #ddd;
+  float:right;
+  clear:both;
+  .organisation-name {
+    font-weight:bold;
+  }
 }
