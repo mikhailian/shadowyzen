@@ -249,15 +249,15 @@ ul.action-links li{
 
 
 .administrator, .administrator:link, .administrator:hover, .administrator:visited {
-  color:#ff0000;
+  color: $red;
 }
 
 .node-moderator, .node-moderator:link, .node-moderator:hover, .node-moderator:visited {
-  color:#b96e22;
+  color:$marron;
 }
 
 .forum-moderator, .forum-moderator:link, .forum-moderator:hover, .forum-moderator:visited {
-  color:#b922b9;
+  color:$violet;
 }
 
 .block-locale {
@@ -482,9 +482,7 @@ tr.even, tr.odd {
 }
 
 #block-views-calendar-block-1 {
-  width:150px;
-  height:150px;
-  display:inline-block;
+  width:100%;
   h2 {
     margin:0;
     a[href="/calendar"] {
@@ -509,4 +507,15 @@ tr.even, tr.odd {
     }
   }
 }
+
+
+//img{
+//  filter: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'><filter%20id='grayscale'><feColorMatrix%20type='matrix'%20values='0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+//  filter: grayscale(100%); /* Current draft standard */
+//  -webkit-filter: grayscale(100%); /* New WebKit */
+//  -moz-filter: grayscale(100%);
+//  -ms-filter: grayscale(100%); 
+//  -o-filter: grayscale(100%);
+//  filter: gray; /* IE6+ */
+//}
 

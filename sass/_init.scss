@@ -109,6 +109,9 @@ $tabs-border: #bbb;
 /*
 /** main color */
 $color: #B21212; // RiB
+$red: #ff0000;
+$marron: #b96e22;
+$violet: #b922b9;
 /* complementary colors, cf https://kuler.adobe.com/Circus-III-color-theme-36202*/
 $color1: #1485CC; // light blue
 $color2: #D90000; // pink
@@ -129,6 +132,7 @@ $fantasy_font: 'PT Sans', fantasy, sans-serif;
 @import "compass/utilities/general/clearfix";
 // See http://compass-style.org/help/tutorials/spriting/
 @import "compass/utilities/sprites";
+@import "icons";
 // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/css3";
 // Helps set up a vertical rhythm.
