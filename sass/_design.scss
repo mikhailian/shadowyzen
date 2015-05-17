@@ -122,6 +122,7 @@ th {
 }
 .invert {
   color:white;
+  @include single-text-shadow(1px, 1px, 1px, false, black);
   a {
     @include single-text-shadow(1px, 1px, 1px, false, black);
     &:hover {
