@@ -127,8 +127,8 @@ th {
     &:hover {
       color:white;
     }
-    &:link {
-      color: $highlight_color;
+    &:link, &:visited {
+      color: red;
     }
   }
 }
