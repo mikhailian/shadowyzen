@@ -124,7 +124,7 @@ th {
   color:white;
   a {
     @include single-text-shadow(1px, 1px, 1px, false, black);
-    &:hover, &:visited, &:hover {
+    &:hover {
       color:white
     }
   }
@@ -546,7 +546,7 @@ tr.even, tr.odd {
 #block-locale-language {
   font-weight:bold;
   @include adjust-font-size-to(14px);
-  a:link, a:visited,  a:hover {
+  a:link, a:visited, a:hover {
     color:white;
   }
 }
