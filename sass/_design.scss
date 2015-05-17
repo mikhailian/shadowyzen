@@ -127,6 +127,9 @@ th {
     &:hover {
       color:$shadow_color;
     }
+    &:link {
+      color: $highlight_color;
+    }
   }
 }
 
