@@ -264,7 +264,7 @@ ul.action-links li{
 .block-locale {
   position:fixed;
   top: -$nav-height;
-  right:1px;
+  right:3px;
   ul {
     list-style-type: none;
     li {
@@ -422,7 +422,6 @@ tr.even, tr.odd {
 /* navigation bar */
 #navigation {
   background-color:$color1;
-  font-size:small;
   font-weight:bold;
   left: 0;
   padding-right:50px;
@@ -431,12 +430,11 @@ tr.even, tr.odd {
   top: 0;
   z-index: 600;
   @include single-box-shadow($shadow_color, 3px, 3px, 3px);
+  a:link, a:visited, a:hover {
+    color:white;
+  }
 }
 
-#navigation  a:link, #navigation a:visited, #navigation a:hover {
-  color:white;
-
-}
 
 /* search form on homepage */
 #block-search-form  {
@@ -536,7 +534,10 @@ tr.even, tr.odd {
   }
 }
 
-.language-link {
-  color: white;
+#block-locale-language {
+  font-weight:bold;
   @include adjust-font-size-to(14px);
+  a:link, a:visited,  a:hover {
+  color:white;
+}
 }
