@@ -6,7 +6,7 @@ p {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, #cloud {
   color: $header_color;
   font-family: $fantasy_font;
   text-align:justify;
@@ -483,7 +483,6 @@ tr.even, tr.odd {
 }
 
 #block-views-calendar-block-1 {
-  width:100%;
   h2 {
     margin:0;
     a[href="/calendar"] {
@@ -525,3 +524,14 @@ tr.even, tr.odd {
 //  filter: gray; /* IE6+ */
 //}
 
+.date-display-single {
+  padding-right: 1em;
+}
+
+.poll {
+  .bar {
+    .foreground {
+      background-color: $color;
+    }
+  }
+}
