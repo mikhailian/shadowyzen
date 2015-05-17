@@ -79,14 +79,15 @@ $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$ptsans:          "PT Sans", "DejaVu Sans", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $ptsans; // The font family set on the html element.
+$font-body:        $ptsans;
 $font-monospace:   $courier;
 
 
@@ -120,7 +121,7 @@ $header_color: #999;
 $highlight_color: $color2;
 $shadow_color: #eee;
 $border_color: #ccc;
-$fantasy_font: 'PT Sans', fantasy, sans-serif;
+$fantasy_font: $ptsans;
 
 // =============================================================================
 // Partials to be shared with all .scss files.
