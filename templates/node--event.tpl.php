@@ -81,7 +81,7 @@
 <div id="node-<?php print $node->nid; ?>"
 
   <?php if ($field_background): ?>
-      <?php print 'style="background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(\'' . image_style_url('x-large', $node->field_background['und'][0]['uri']) . '\'); background-repeat: no-repeat; background-size:cover;"'; ?>
+      <?php print 'style="background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(\'' . image_style_url('x-large', $node->field_background['und'][0]['uri']) . '\'); background-repeat: no-repeat; background-size:cover;"'; ?>
       <?php $classes = $classes . ' invert'; ?>
   <?php endif; ?>
   class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
