@@ -124,9 +124,10 @@ th {
   color:white;
   @include single-text-shadow(1px, 1px, 1px, false, black);
   a {
+    color: $shadow_color;
     @include single-text-shadow(1px, 1px, 1px, false, black);
     &:hover {
-      color:white;
+      color:$shadow_color;
     }
   }
 }
