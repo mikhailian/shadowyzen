@@ -198,7 +198,7 @@
   }
   background-position: 8px 8px; /* LTR */
   background-repeat: no-repeat;
-  border: 1px solid #be7;
+  border: 1px solid #1BFF5C;
 }
 .messages--status {
   @extend .messages;
@@ -795,3 +795,4 @@ tr.selected td {
     background-image: image-url("progress.gif");
   }
 }
+
