@@ -120,6 +120,15 @@ th {
     float:right;
   }
 }
+.invert {
+  color:white;
+  a {
+    @include single-text-shadow(1px, 1px, 1px, false, black);
+    &:hover, &:visited, &:hover {
+      color:white
+    }
+  }
+}
 
 .node, .comment, .view-top-comments .views-row {
   border: solid 1px $border-color;
@@ -538,6 +547,6 @@ tr.even, tr.odd {
   font-weight:bold;
   @include adjust-font-size-to(14px);
   a:link, a:visited,  a:hover {
-  color:white;
-}
+    color:white;
+  }
 }
