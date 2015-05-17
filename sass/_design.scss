@@ -121,11 +121,11 @@ th {
   }
 }
 .invert {
-  color:white;
+  color:$shadow_color;
   a {
     @include single-text-shadow(1px, 1px, 1px, false, black);
     &:hover {
-      color:white
+      color:$shadow_color;
     }
   }
 }
