@@ -538,4 +538,5 @@ tr.even, tr.odd {
 
 .language-link {
   color: white;
+  @include adjust-font-size-to(14px);
 }
