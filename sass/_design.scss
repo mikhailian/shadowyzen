@@ -310,16 +310,21 @@ td {
   word-break:break-word;
 }
 
-blockquote:before {
-  content: "\201C";
-  font-size: 57px;
-  color: $color;
-  text-shadow: 1px 1px 1px #aaa;
-  float:left;
-  height: 1px;
-  margin-top: 0.2em;
-  margin-right: 0.1em;
-  font-family: Arial, helvetica, sans-serif;
+blockquote {
+  margin: 1.5em 0 1.5em 0;
+  border-left: 1px solid #ccc;
+  padding-left: 1em;
+  &:before {
+    content: "\201C";
+    font-size: 57px;
+    color: $color;
+    text-shadow: 1px 1px 1px #aaa;
+    float:left;
+    height: 1px;
+    margin-top: 0.2em;
+    margin-right: 0.1em;
+    font-family: Arial, helvetica, sans-serif;
+  }
 }
 
 /* Padding of images, e.g. on home page*/
