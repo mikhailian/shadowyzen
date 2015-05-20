@@ -118,6 +118,7 @@ th {
 .node {
   .field-name-field-image {
     float:right;
+    padding: 1ex 0 1ex 1em;
   }
 }
 .invert {
@@ -322,8 +323,8 @@ blockquote:before {
 }
 
 /* Padding of images, e.g. on home page*/
-.field-type-image {
-  padding: 1ex 1em 1ex 1em;
+.field-name-field-creative {
+  padding: 2px;
 }
 
 
