@@ -56,6 +56,7 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/img/favicon-144.png">
     <meta name="msapplication-config" content="/img/browserconfig.xml">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
