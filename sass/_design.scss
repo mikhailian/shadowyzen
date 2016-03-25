@@ -529,15 +529,15 @@ tr.even, tr.odd {
   @include single-box-shadow($shadow_color, 3px, 3px, 3px);
   margin-bottom:rhythm(0.67);
 }
-//img{
-//  filter: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'><filter%20id='grayscale'><feColorMatrix%20type='matrix'%20values='0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-//  filter: grayscale(100%); /* Current draft standard */
-//  -webkit-filter: grayscale(100%); /* New WebKit */
-//  -moz-filter: grayscale(100%);
-//  -ms-filter: grayscale(100%); 
-//  -o-filter: grayscale(100%);
-//  filter: gray; /* IE6+ */
-//}
+img{
+  filter: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'><filter%20id='grayscale'><feColorMatrix%20type='matrix'%20values='0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: grayscale(100%); /* Current draft standard */
+  -webkit-filter: grayscale(100%); /* New WebKit */
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%); 
+  -o-filter: grayscale(100%);
+  filter: gray; /* IE6+ */
+}
 
 .date-display-single {
   padding-right: 1em;
