@@ -136,8 +136,8 @@ th {
 .node, .comment, .view-top-comments .views-row {
   border: solid 1px $border-color;
   @include single-box-shadow($shadow_color, 3px, 3px, 3px);
-  padding: rhythm(0.67);
-  margin-bottom:rhythm(0.67);
+  padding: rhythm(0.33);
+  margin-bottom:rhythm(0.33);
 }
 
 .node, .block {
@@ -539,6 +539,14 @@ tr.even, tr.odd {
 //  filter: gray; /* IE6+ */
 //}
 
+
+/*.submitted {
+    text-align:right;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}*/
+
 .date-display-single {
   padding-right: 1em;
 }
@@ -556,5 +564,14 @@ tr.even, tr.odd {
   @include adjust-font-size-to(14px);
   a:link, a:visited, a:hover {
     color:white;
+  }
+}
+
+.node-book {
+  .field-type-image {
+    div {
+      float: left;
+      padding: 5px;
+    }
   }
 }
